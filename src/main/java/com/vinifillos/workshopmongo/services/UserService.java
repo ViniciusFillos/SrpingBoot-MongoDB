@@ -1,6 +1,7 @@
 package com.vinifillos.workshopmongo.services;
 
 import com.vinifillos.workshopmongo.domain.User;
+import com.vinifillos.workshopmongo.dto.UserDTO;
 import com.vinifillos.workshopmongo.repository.UserRespository;
 import com.vinifillos.workshopmongo.services.exception.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,5 +24,13 @@ public class UserService {
         Optional<User> user = userRespository.findById(id);
         if(user.isPresent()) return user.get();
         else throw new ObjectNotFoundException("Objeto não encontrado");
+    }
+
+    public User insert(User user) {
+        return userRespository.insert(user);
+    }
+
+    public User fromDTO(UserDTO userDTO) {
+        return new User(userDTO.getId(), userDTO.getName(), userDTO.getEmail());
     }
 }
