@@ -3,7 +3,7 @@ package com.vinifillos.workshopmongo.services;
 import com.vinifillos.workshopmongo.domain.User;
 import com.vinifillos.workshopmongo.dto.UserDTO;
 import com.vinifillos.workshopmongo.repository.UserRespository;
-import com.vinifillos.workshopmongo.services.exception.ObjectNotFoundException;
+import com.vinifillos.workshopmongo.services.exceptions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

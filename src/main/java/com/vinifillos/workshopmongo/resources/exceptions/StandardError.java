@@ -1,4 +1,4 @@
-package com.vinifillos.workshopmongo.resources.Exceptions;
+package com.vinifillos.workshopmongo.resources.exceptions;
 
 import java.io.Serial;
 import java.io.Serializable;

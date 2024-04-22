@@ -1,4 +1,4 @@
-package com.vinifillos.workshopmongo.services.exception;
+package com.vinifillos.workshopmongo.services.exceptions;
 
 import java.io.Serial;
 

@@ -1,6 +1,6 @@
-package com.vinifillos.workshopmongo.resources.Exceptions;
+package com.vinifillos.workshopmongo.resources.exceptions;
 
-import com.vinifillos.workshopmongo.services.exception.ObjectNotFoundException;
+import com.vinifillos.workshopmongo.services.exceptions.ObjectNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
