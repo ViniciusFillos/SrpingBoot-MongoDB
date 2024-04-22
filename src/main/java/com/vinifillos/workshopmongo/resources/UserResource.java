@@ -1,5 +1,6 @@
 package com.vinifillos.workshopmongo.resources;
 
+import com.vinifillos.workshopmongo.domain.Post;
 import com.vinifillos.workshopmongo.domain.User;
 import com.vinifillos.workshopmongo.dto.UserDTO;
 import com.vinifillos.workshopmongo.services.UserService;
@@ -28,8 +29,8 @@ public class UserResource {
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<User> findById(@PathVariable String id) {
-        User userDTO = userService.findById(id);
-        return ResponseEntity.ok().body(userDTO);
+        User user = userService.findById(id);
+        return ResponseEntity.ok().body(user);
     }
 
     @PostMapping
@@ -52,5 +53,11 @@ public class UserResource {
         user.setId(id);
         user = userService.update(user);
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping(value = "/{id}/posts")
+    public ResponseEntity<List<Post>> findPosts(@PathVariable String id) {
+        User user = userService.findById(id);
+        return ResponseEntity.ok().body(user.getPosts());
     }
 }
